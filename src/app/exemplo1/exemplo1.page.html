@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Coordenads e Endereços in Ionic App
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <h4>Geolocation & Gecoder App</h4>
+  <!-- Longitude -->
+  <ion-grid>
+      <ion-row>
+        <ion-col size="4" class="ion-text-center">
+        Longitude
+        </ion-col>
+        <ion-col>
+          <ion-badge class="ion-text-wrap" color="medium">{{longitude}}</ion-badge>
+        </ion-col>
+      </ion-row>
+   <!-- Precisão -->
+      <ion-row>
+        <ion-col size="4" class="ion-text-center" color="medium">
+        Precisão
+        </ion-col>
+        <ion-col>
+          <ion-badge class="ion-text-wrap" color="medium">{{precisao}}</ion-badge>
+        </ion-col>
+      </ion-row>
+  <!-- Endereco -->
+      <ion-row>
+        <ion-col size="4" class="ion-text-center">
+        Endereço
+        </ion-col>
+        <ion-col>
+          <ion-badge class="ion-text-wrap" color="medium">{{endereco}}</ion-badge>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  <ion-button (click)="getGeolocation()" color="success" expand="full">Obter Localização</ion-button>
+  </ion-content>
